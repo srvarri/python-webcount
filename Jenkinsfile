@@ -3,12 +3,13 @@ pipeline {
     stages {
         stage('vcs') {
             steps {
-                git branch: 'master', url:'https://github.com/python-ci-cd/python-webcount.git'
+                git branch: 'master', url:'https://github.com/srvarri/python-webcount.git'
             }
 
         }
         stage('build') {
             steps {
+                sh ' requirements.txt'
                 sh 'tox'
             }
         }
