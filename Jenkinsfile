@@ -9,8 +9,8 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'pip3 install -r requirements.txt'
-                sh 'tox'
+                sh '''pip3 install -r requirements.txt
+                sh tox'''
             }
         }
 
